@@ -3,10 +3,21 @@
     <head>
         <meta charset="utf-8">
         <title>{{ page.title }}</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/css/normalize.css">
         <link rel="stylesheet" href="/assets/css/styles.css">
     </head>
     <body>
         {% include navigation.html %}
-        {{ content }}
+        <div class="hero">
+            <h1>Kory Hutchison</h1>
+            <svg id="hero-slant" width="100%" preserveAspectRatio="none" viewBox="0 0 100 50" class="visible-md" style="position: absolute; z-index: 1; left: 0px; bottom: -4px; height: 160px;">
+                <polygon x="0" y="0" fill="white" points="0,50 100,50 100,48 0,20"></polygon>
+            </svg>
+        </div>
+        <div>
+            {{ content }}
+        </div>
     </body>
+    <script type="text/javascript" src="/assets/js/default.js"></script>
 </html>

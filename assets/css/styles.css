@@ -1,5 +1,11 @@
 html {
     font-family: 'Roboto', sans-serif;
+    color: rgba(0,0,0,.87);
+}
+
+img {
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
 }
 
 nav {
@@ -20,15 +26,32 @@ nav div a {
     transition: all .5s ease 0s;
 }
 
+nav div a:hover {
+    color: #e6e6e6;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 20px;
+}
+
 #nav {
     transition: all .5s ease 0s;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.gutters {
+    margin: 0 20px 40px;
 }
 
 .hero {
     position: relative;
     height: 350px;
-    background-color: #ffcb43;
-    background-image: linear-gradient(319deg, #ffcb43 0%, #ff6425 37%, #ff0016 100%);
+    background-color: #045de9;
+    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,4 +65,34 @@ nav div a {
 
 .nav-scroll a {
     color: black;
+}
+
+.pad-sides {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pad-bottom {
+    padding-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    max-width: 1070px;
+    margin: auto;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+@media (max-width: 730px) {
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .col-half {
+        width: 100%;
+    }
 }

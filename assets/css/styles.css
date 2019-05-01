@@ -39,8 +39,37 @@ p {
     transition: all .5s ease 0s;
 }
 
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: rgba(0,0,0,.87);
+    padding: 10px 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(0,0,0,.87);
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all .5s ease 0s;
+}
+
+.btn:hover {
+    background-color: #3682fc;
+    border-color: #3682fc;
+    color: #FFF;
+}
+
 .col-half {
     width: 50%;
+}
+
+.content-container {
+    max-width: 1070px;
+    margin: auto;
+}
+
+.grey {
+    background-color: #F8F8F8;
 }
 
 .gutters {
@@ -68,7 +97,7 @@ p {
 }
 
 .nav-scroll a {
-    color: black;
+    color: rgba(0,0,0,.87);
 }
 
 .pad-sides {
@@ -82,9 +111,12 @@ p {
 
 .row {
     display: flex;
-    max-width: 1070px;
-    margin: auto;
     align-items: center;
+}
+
+.section-padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .text-center {

@@ -1,0 +1,20 @@
+---
+layout: default
+title: Projects
+heroTitle: Projects
+---
+
+<div class="section-padding">
+    <div class="content-container text-center">
+        {% assign projects = site.projects | sort: 'title' %}
+        {% for project in projects %}
+            <div class="project-thumbnail">
+                <div class="project-image"></div>
+                <div class="pad-sides">
+                    <h2>{{project.title}}</h2>
+                    {{ project.snippet }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

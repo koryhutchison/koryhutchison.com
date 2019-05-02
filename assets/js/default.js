@@ -8,6 +8,10 @@ function ready(fn) {
 
 ready(function() {
     document.addEventListener('scroll', handleScroll);
+
+    // Add the year
+    var today = new Date;
+    document.getElementById('year').innerHTML = today.getFullYear();
 });
 
 function handleScroll() {

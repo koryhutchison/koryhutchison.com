@@ -11,28 +11,27 @@
     </head>
     <body>
         <div id="main">
-            <hello-world></hello-world>
-        </div>
-        {% include navigation.html %}
-        <div class="brand">
-            <h1 class="text-center pad-sides">{{ page.heroTitle }}</h1>
-            <svg class="hero-slant" width="100%" preserveAspectRatio="none" viewBox="0 0 100 50">
-                <polygon x="0" y="0" fill="white" points="0,50 100,50 100,48 0,20"></polygon>
-            </svg>
-        </div>
-        <div>
-            {{ content }}
-        </div>
-        <div class="brand">
-            <svg class="footer-slant" width="100%" preserveAspectRatio="none" viewBox="0 0 100 50">
-                <polygon x="0" y="0" fill="white" points="0,30 100,2 100,0 0,0"></polygon>
-            </svg>
-            <div class="text-center">
-                <div class="footer-icons pad-bottom">
-                    <a href="https://github.com/koryhutchison"><i class="fab fa-github fa-3x"></i></a>
-                    <a href="https://www.linkedin.com/in/kory-hutchison"><i class="fab fa-linkedin-in fa-3x"></i></a>
+            <navigation></navigation>
+            <div class="brand">
+                <h1 class="text-center pad-sides">{{ page.heroTitle }}</h1>
+                <svg class="hero-slant" width="100%" preserveAspectRatio="none" viewBox="0 0 100 50">
+                    <polygon x="0" y="0" fill="white" points="0,50 100,50 100,48 0,20"></polygon>
+                </svg>
+            </div>
+            <div>
+                {{ content }}
+            </div>
+            <div class="brand">
+                <svg class="footer-slant" width="100%" preserveAspectRatio="none" viewBox="0 0 100 50">
+                    <polygon x="0" y="0" fill="white" points="0,30 100,2 100,0 0,0"></polygon>
+                </svg>
+                <div class="text-center">
+                    <div class="footer-icons pad-bottom">
+                        <a href="https://github.com/koryhutchison"><i class="fab fa-github fa-3x"></i></a>
+                        <a href="https://www.linkedin.com/in/kory-hutchison"><i class="fab fa-linkedin-in fa-3x"></i></a>
+                    </div>
+                    Copyright &copy; <span id="year"></span> Kory Hutchison
                 </div>
-                Copyright &copy; <span id="year"></span> Kory Hutchison
             </div>
         </div>
     </body>

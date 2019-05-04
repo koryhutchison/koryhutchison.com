@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import HelloWorld from './components/HelloWorld'
+import Navigation from './components/navigation'
 
-Vue.component('helloWorld', HelloWorld)
+Vue.component('navigation', Navigation)
 
 const main = new Vue({
   el: '#main'

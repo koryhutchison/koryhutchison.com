@@ -26,7 +26,7 @@ export default {
             this.svgPoints = '0,30 100,2 100,0 0,0';
             this.svgStyle = {
                 left: '0px',
-                top: '0px'
+                top: '-1px'
             }
         }
     }

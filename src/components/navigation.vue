@@ -17,7 +17,7 @@ export default {
     },
     methods: {
         handleScroll () {
-            if (document.body.scrollTop > 0) {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
                 this.isScrolling = true;
             } else {
                 this.isScrolling = false;

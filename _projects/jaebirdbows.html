@@ -6,4 +6,33 @@ snippet: An eCommerce website that I built from the ground up.
 image: /assets/images/jaebirdbows.png
 ---
 
-<h1>Jae Bird Bows</h1>
+<kory-section title="What is Jae Bird Bows?">
+    <div class="row">
+        <div class="col-half gutters">
+            <img class="img-responsive" src="/assets/images/jaebirdbows-screenshot.png" />
+        </div>
+        <div class="col-half gutters pad-sides">
+            <p>
+                <a href="https://www.jaebirdbows.com">Jae Bird Bows</a> is an eCommerce website that
+                I built for my sister as one of my first side projects. I had recently learned Django,
+                and I wanted to have something that would look good on my resume. I built an entire admin
+                interface and checkout process all from scratch. It was an amazing learning experience.
+            </p>
+        </div>
+    </div>
+</kory-section>
+<kory-section class="no-padding-top" title="What is it built with?">
+    <div class="row">
+        <div class="col-half gutters pad-sides">
+            <p>
+                I used Django as my main framework, but I used an additional library called <a href="http://doconix.github.io/django-mako-plus/">Django Mako Plus</a>.
+                That library helps simplify the routing and adds a stronger templating language to Django. I used PostgreSQL for the
+                database and designed the whole thing myself. From storing product information, orders, and even a coupon system, this
+                database was quite a challenge. In order to process payments, I leveraged Stripe which made the process very easy, and professional.
+            </p>
+        </div>
+        <div class="col-half gutters">
+            <img class="img-responsive no-shadow" src="/assets/images/jaebirdbows-stack.png" />
+        </div>
+    </div>
+</kory-section>

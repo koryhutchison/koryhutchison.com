@@ -6,4 +6,35 @@ snippet: An experiment with electron that makes the Touch Bar useful.
 image: /assets/images/git-touchbar.png
 ---
 
-<h1>Git Touch Bar</h1>
+<kory-section title="What is Git Touch Bar?">
+    <div class="row">
+        <div class="col-half gutters">
+            <img class="img-responsive" src="/assets/images/git-touchbar.png" />
+        </div>
+        <div class="col-half gutters pad-sides">
+            <p>
+                Git Touch Bar is an <a href="https://electronjs.org">Electron</a> application
+                that attempts to make the Touch Bar a little more useful. The application runs
+                in the tray, but allows the user to change branches, pull, push, commit, and even
+                stash changes! Now there is a simple touch interface for Git!
+            </p>
+        </div>
+    </div>
+</kory-section>
+<kory-section class="no-padding-top" title="How it works">
+    <div class="row">
+        <div class="col-half gutters pad-sides">
+            <p>
+                This is simple interface that shows up when the user clicks on the icon in the tray. It
+                shows the user what repos they are tracking, and let's them choose the repo they want active
+                in the Touch Bar. To add another repo, just click the folder icon in the top right corner
+                and find the folder in the Finder. When the specific repo is active, that means all the actions
+                performed in the Touch Bar will be performed on that repo. Lastly, if you want to quit
+                the application, simply click the "X" in the top left corner.
+            </p>
+        </div>
+        <div class="col-half gutters">
+            <img class="img-responsive" src="/assets/images/git-touchbar-screenshot.png" />
+        </div>
+    </div>
+</kory-section>

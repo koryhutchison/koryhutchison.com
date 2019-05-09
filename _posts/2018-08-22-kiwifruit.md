@@ -1,6 +1,8 @@
 ---
 layout: post
 author: ted
+categories: [Vue]
+excerpt: This is an excerpt to the post. See what's inside!
 ---
 Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible
 berry of several species of woody vines in the genus Actinidia.

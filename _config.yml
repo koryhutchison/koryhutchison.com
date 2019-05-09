@@ -7,3 +7,6 @@ exclude:
     - webpack.config.js
     - package.lock.json
     - node_modules
+
+include:
+    - _data

@@ -1,0 +1,5 @@
+---
+title: categories
+---
+
+[{%- for cat in site.categories -%}"{{ cat[0] }}"{%- unless forloop.last-%},{%- endunless -%}{%- endfor -%}]

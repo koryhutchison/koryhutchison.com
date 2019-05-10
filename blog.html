@@ -3,18 +3,4 @@ layout: default
 title: Blog
 heroTitle: Blog
 ---
-<kory-section class="text-center">
-    {% for post in site.posts %}
-    <a class="project-thumbnail-link" href="{{post.url}}">
-        <div class="project-thumbnail">
-            <div class="project-image" style="background: url('{{post.image}}') no-repeat center/130%"></div>
-            <div class="pad-sides">
-                <h2>{{post.title}}</h2>
-                {{ post.excerpt }}
-            </div>
-        </div>
-    </a>
-    {% endfor %}
-</kory-section>
-
-{{ site.categories | removeContent | jsonify }}
+<blog-gallery></blog-gallery>

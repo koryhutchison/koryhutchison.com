@@ -1,7 +1,7 @@
 <template>
     <div class="gallery-wrapper">
         <div class="filter-panel">
-            <div class="filter-dialog">
+            <div class="filter-dialog" :style="stickSearch ? 'position: fixed; top: 50px' : ''">
                 <div class="text-center">
                     <h3 class="search-headding">Narrow your search</h3>
                     <input class="search-field" type="text" v-model="search" placeholder="Search" />
@@ -39,7 +39,8 @@ export default {
         return {
             categories: [],
             posts: [],
-            search: ''
+            search: '',
+            stickSearch: false
         }
     },
     computed: {
@@ -60,13 +61,22 @@ export default {
             return result;
         }
     },
+    methods: {
+        handleScroll () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                this.stickSearch = true;
+            } else {
+                this.stickSearch = false;
+            }
+        }
+    },
     mounted () {
         axios.get('/_data/categories.json')
              .then(response => {
                  response.data.forEach(category => {
                      this.categories.push({
                          name: category,
-                         active: true
+                         active: false
                      });
                  });
              });
@@ -75,6 +85,12 @@ export default {
              .then(response => {
                  this.posts = response.data;
              });
+    },
+    created () {
+        document.addEventListener('scroll', this.handleScroll);
+    },
+    destroyed () {
+        document.removeEventListener('scroll', this.handleScroll);
     }
 }
 </script>
@@ -90,7 +106,8 @@ export default {
     margin-bottom: 10px;
 }
 .filter-dialog {
-    margin: 10px 10px 10px 30px;
+    position: relative;
+    margin: 15px 10px 10px 30px;
     border-radius: 10px;
     background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
     color: #FFF;

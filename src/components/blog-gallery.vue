@@ -129,6 +129,11 @@ export default {
     padding: 10px;
     border-radius: 5px;
     border: none;
+    transition: transform .3s ease 0s, box-shadow .3s ease 0s;
+}
+.search-field:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 7px rgba(0, 0, 0, .4);
 }
 .search-headding {
     margin-top: 0;
@@ -151,7 +156,7 @@ export default {
     border-radius: 10px;
     margin: 15px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
-    transition: transform .5s ease 0s, box-shadow .5s ease 0s;
+    transition: all .5s ease 0s;
 }
 
 .post-thumbnail:hover {

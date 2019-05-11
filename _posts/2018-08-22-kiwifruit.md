@@ -1,7 +1,7 @@
 ---
 layout: post
 author: ted
-categories: [Vue]
+categories: [Django, Vue]
 excerpt: This is an excerpt to the post. See what's inside!
 ---
 Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible

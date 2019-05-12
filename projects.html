@@ -8,7 +8,7 @@ heroTitle: Projects
     {% for project in projects %}
     <a class="project-thumbnail-link" href="{{project.url}}">
         <div class="project-thumbnail">
-            <div class="project-image" style="background: url('{{project.image}}') no-repeat center/130%"></div>
+            <div class="project-image" style="background-image: url('{{project.image}}'); background-repeat: no-repeat; background-size: cover; background-position: center center;"></div>
             <div class="pad-sides">
                 <h2>{{project.title}}</h2>
                 {{ project.snippet }}

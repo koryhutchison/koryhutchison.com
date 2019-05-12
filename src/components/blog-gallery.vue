@@ -21,7 +21,7 @@
         <div class="posts-panel text-center">
             <a v-for="post in filteredPosts" class="post-thumbnail-link" :href="post.url">
                 <div class="post-thumbnail">
-                    <div class="post-image" :style="`background: url('${post.image}') no-repeat center/130%`"></div>
+                    <div class="post-image" :style="`background-image: url('${post.image}'); background-repeat: no-repeat; background-size: cover; background-position: center center;`"></div>
                     <div class="pad-sides">
                         <h2>{{ post.title }}</h2>
                         {{ post.excerpt }}
@@ -63,7 +63,7 @@ export default {
     },
     methods: {
         handleScroll () {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            if ((document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) && window.innerWidth > 630) {
                 this.stickSearch = true;
             } else {
                 this.stickSearch = false;
@@ -120,6 +120,7 @@ export default {
 .gallery-wrapper {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
 }
 .posts-panel {
     flex-grow: 2;
@@ -141,6 +142,18 @@ export default {
     font-size: 25px;
 }
 
+@media(max-width: 630px) {
+    .filter-panel {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .filter-dialog {
+        max-width: 250px;
+        margin: 15px 10px 10px 10px;
+    }
+}
+
 /* Post Styling */
 .post-image {
     height: 200px;
@@ -151,10 +164,11 @@ export default {
 
 .post-thumbnail {
     display: inline-block;
-    width: 300px;
+    max-width: 300px;
     height: 350px;
     border-radius: 10px;
     margin: 15px;
+    vertical-align: middle;
     box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
     transition: all .5s ease 0s;
 }

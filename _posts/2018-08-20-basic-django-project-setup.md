@@ -13,11 +13,9 @@ Web framework that encourages rapid development and clean, pragmatic design." I 
 to highlight how I set up my projects so that I can help you always get started very
 quickly.
 
-{% highlight javascript %}
-function (test) {
-    console.log(test);
-    console.log("here");
-}
-{% endhighlight %}
+<highlight-code lang="python">
+def test_function():
+    print("Test")
+</highlight-code>
 
 

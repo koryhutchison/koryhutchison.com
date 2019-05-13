@@ -6,14 +6,18 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "watch": "cross-env NODE_ENV=development webpack --watch"
+    "watch": "cross-env NODE_ENV=development webpack --watch",
+    "push": "push-dir --dir=_site --branch=gh-pages"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
-    "vue": "^2.6.10"
+    "highlight.js": "^9.15.6",
+    "push-dir": "^0.4.1",
+    "vue": "^2.6.10",
+    "vue-highlight.js": "^3.1.0"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",

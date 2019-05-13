@@ -13,11 +13,11 @@ Web framework that encourages rapid development and clean, pragmatic design." I 
 to highlight how I set up my projects so that I can help you always get started very
 quickly.
 
-```javascript
+{% highlight javascript %}
 function (test) {
     console.log(test);
     console.log("here");
 }
-```
+{% endhighlight %}
 
 

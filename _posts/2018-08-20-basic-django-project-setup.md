@@ -7,11 +7,17 @@ tags: [ test, test2 ]
 excerpt: Learn how to set up a Django project
 image: /assets/images/django-logo.jpg
 ---
-A banana is an edible fruit – botanically a berry – produced by several kinds
-of large herbaceous flowering plants in the genus Musa.
+Django is a web framework that makes it really easy to get started. Their
+[website](https://www.djangoproject.com) says that "Django is a high-level Python
+Web framework that encourages rapid development and clean, pragmatic design." I want
+to highlight how I set up my projects so that I can help you always get started very
+quickly.
 
-In some countries, bananas used for cooking may be called "plantains",
-distinguishing them from dessert bananas. The fruit is variable in size, color,
-and firmness, but is usually elongated and curved, with soft flesh rich in
-starch covered with a rind, which may be green, yellow, red, purple, or brown
-when ripe.
+```javascript
+function (test) {
+    console.log(test);
+    console.log("here");
+}
+```
+
+

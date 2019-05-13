@@ -1,9 +1,11 @@
 ---
 layout: post
-author: jill
-categories: [Django, Vue]
+author: Kory Hutchison
+heroTitle: Basic Django Project Setup
+categories: [Django]
 tags: [ test, test2 ]
-excerpt: This is an excerpt to the post. See what's inside!
+excerpt: Learn how to set up a Django project
+image: /assets/images/django-logo.jpg
 ---
 A banana is an edible fruit – botanically a berry – produced by several kinds
 of large herbaceous flowering plants in the genus Musa.

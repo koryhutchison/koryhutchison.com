@@ -8,6 +8,7 @@ title: posts
     "title": "{{ post.title }}",
     "excerpt": "{{ post.excerpt }}",
     "url": "{{ post.url }}",
+    "image": "{{ post.image }}",
     "date": "{{ post.date }}",
     "categories": {{ post.categories | jsonify }},
     "tags": {{ post.tags | jsonify }}

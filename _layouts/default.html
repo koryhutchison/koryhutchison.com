@@ -14,6 +14,11 @@
             <navigation></navigation>
             <brand-container>
                 <h1 class="text-center pad-sides">{{ page.heroTitle }}</h1>
+                {%- if page.author -%}
+                <p>
+                    {{ page.author }} - {{ page.date | date_to_string }}
+                </p>
+                {%- endif -%}
             </brand-container>
             <div>
                 {{ content }}

@@ -40,6 +40,7 @@ export default {
     background-color: #045de9;
     background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #FFF;

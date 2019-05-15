@@ -36,7 +36,7 @@ export default {
 <style scoped>
 .brand {
     position: relative;
-    height: 350px;
+    min-height: 350px;
     background-color: #045de9;
     background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
     display: flex;
@@ -50,5 +50,12 @@ export default {
     position: absolute;
     z-index: 1;
     height: 160px;
+}
+
+@media (max-width: 414px) {
+    .brand {
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
 }
 </style>

@@ -71,7 +71,7 @@ export default {
         }
     },
     mounted () {
-        axios.get('/_data/categories.json')
+        axios.get('/data/categories.json')
              .then(response => {
                  response.data.forEach(category => {
                      this.categories.push({
@@ -81,7 +81,7 @@ export default {
                  });
              });
 
-        axios.get('/_data/posts.json')
+        axios.get('/data/posts.json')
              .then(response => {
                  this.posts = response.data;
              });

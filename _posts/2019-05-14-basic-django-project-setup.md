@@ -164,5 +164,9 @@ python manage.py makemigrations
 python manage.py migrate
 </highlight-code>
 
-If there are no errors, then go ahead and start up your server! Now you see how to
-set up a Django project. 
+If there are no errors, then that means it all worked! These 2 commands are for putting your
+models into the database. With a default Django project, there are a few models that exist
+that Django makes for you. So we are making the migrations, or the files that will actually
+execute on the database. Then migrate is what runs those files on the database. I'll do
+another tutorial about how I streamline this process. But for now, that's how you set up a Django
+project!

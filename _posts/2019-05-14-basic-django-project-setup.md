@@ -3,7 +3,7 @@ layout: post
 author: Kory Hutchison
 heroTitle: Basic Django Project Setup
 categories: [Django]
-tags: [ test, test2 ]
+tags: [ Development, Python, Terminal, PostgreSQL, Database ]
 excerpt: Learn how Django works and how to set up a project
 image: /assets/images/django-logo.jpg
 ---

@@ -16,9 +16,10 @@ code {
 img {
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    width: 100%;
 }
 
-p {
+p, ul {
     line-height: 1.5;
     font-size: 20px;
 }
@@ -62,10 +63,6 @@ p {
 
 .gutters {
     margin: 0 20px 40px;
-}
-
-.img-responsive {
-    width: 100%;
 }
 
 .no-padding-top {

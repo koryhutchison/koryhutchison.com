@@ -8,3 +8,6 @@ exclude:
     - package.lock.json
     - node_modules
 
+url: "https://koryhutchison.com"
+plugins:
+  - jekyll-sitemap

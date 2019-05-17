@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const CompressionPlugin = require('compression-webpack-plugin')
 
 module.exports = {
   entry: './src/main.js',
@@ -25,7 +26,8 @@ module.exports = {
     ]
   },
   plugins: [
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new CompressionPlugin()
   ],
   resolve: {
     alias: {

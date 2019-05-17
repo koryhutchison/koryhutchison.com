@@ -21,6 +21,7 @@
     "vue-highlight.js": "^3.1.0"
   },
   "devDependencies": {
+    "compression-webpack-plugin": "^2.0.0",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
     "vue-loader": "^15.7.0",

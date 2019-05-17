@@ -47,7 +47,7 @@ export default {
         filteredPosts () {
             const result = this.posts.filter(post => {
                 let count = 0
-                return ((post.title.toLowerCase().indexOf(this.search) > -1)
+                return ((post.title.toLowerCase().indexOf(this.search.toLowerCase()) > -1)
                         && (post.categories.some(category => {
                             let activeCount = 0
                             this.categories.forEach(cat => {

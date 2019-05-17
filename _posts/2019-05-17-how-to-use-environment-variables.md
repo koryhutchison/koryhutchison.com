@@ -61,7 +61,7 @@ This will reload the file and you can verify that your variable is there like so
 echo $KEY
 </highlight-code>
 
-And you should see your key show up. Now that we have they key in our .bash_profile,
+And you should see your key show up. Now that we have the key in our .bash_profile,
 all there is left is to load that key in settings.py!
 
 ## Configure Django

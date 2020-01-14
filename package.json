@@ -8,7 +8,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "watch": "cross-env NODE_ENV=development webpack --watch",
     "push": "push-dir --dir=_site --branch=gh-pages",
-    "j-build": "JEKYLL_ENV=production jekyll build"
+    "j-build": "JEKYLL_ENV=production bundle exec jekyll build"
   },
   "keywords": [],
   "author": "",

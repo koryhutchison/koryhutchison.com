@@ -29,5 +29,6 @@ Vue.component('korySection', KorySection)
 Vue.component('blogGallery', BlogGallery)
 
 const main = new Vue({
-  el: '#main'
+  el: '#main',
+  delimiters: ['[[', ']]']
 })

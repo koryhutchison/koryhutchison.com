@@ -163,7 +163,7 @@ So if the form is valid, then we go ahead and run the commit method on the form 
 logs the user in, and then we redirect them to the page we want. All that's left now is
 to create the html!
 
-# Create the template
+## Create the template
 
 Now we need to create a folder called templates and put it in our account app directory.
 After creating the folder, go adead and create a file called login.html and paste the following
@@ -192,7 +192,7 @@ Now that we've got that in there, run your app and navigate to
 [localhost:8000/account/login](http://localhost:8000/account/login). You should see
 your form!
 
-# Wrap Up
+## Wrap Up
 
 Now that you see the form, there is one last piece. We need to add a success route so we
 can verify that our code is working. You should already know how to do this from what

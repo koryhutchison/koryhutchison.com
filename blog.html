@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117700401-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-117700401-2');
+        </script>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Blog</title>
+        <meta property="og:title" content="Blog">
+        
+        <meta name="description" content="A blog full of tutorials that aim to make development easy" />
+        <meta property="og:description" content="A blog full of tutorials that aim to make development easy">
+        
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="/assets/css/normalize.css">
+        <link rel="stylesheet" href="/assets/css/styles.css">
+    </head>
+    <body>
+        <div id="main">
+            <navigation></navigation>
+            <brand-container>
+                <h1 class="text-center pad-sides">Blog</h1></brand-container>
+            <div>
+                <blog-gallery></blog-gallery>
+
+            </div>
+            <brand-container slant-top>
+                <div class="text-center">
+                    <div class="footer-icons pad-bottom">
+                        <a href="https://github.com/koryhutchison"><i class="fab fa-github fa-3x"></i></a>
+                        <a href="https://www.linkedin.com/in/kory-hutchison"><i class="fab fa-linkedin-in fa-3x"></i></a>
+                    </div>
+                    Copyright &copy; <span id="year"></span> Kory Hutchison
+                </div>
+            </brand-container>
+        </div>
+    </body>
+    <script type="text/javascript" src="/assets/js/default.js"></script>
+    <script src="/dist/build.js"></script>
+</html>

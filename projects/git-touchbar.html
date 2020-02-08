@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+    <head>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117700401-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-117700401-2');
+        </script>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Git Touch Bar</title>
+        <meta property="og:title" content="Git Touch Bar">
+        
+        <meta name="description" content="An experiment with electron that makes the Touch Bar useful." />
+        <meta property="og:description" content="An experiment with electron that makes the Touch Bar useful.">
+        
+        <meta property="og:image" content="/assets/images/git-touchbar.png">
+        
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="/assets/css/normalize.css">
+        <link rel="stylesheet" href="/assets/css/styles.css">
+    </head>
+    <body>
+        <div id="main">
+            <navigation></navigation>
+            <brand-container>
+                <h1 class="text-center pad-sides">Git Touch Bar</h1></brand-container>
+            <div>
+                <kory-section title="What is Git Touch Bar?">
+    <div class="row">
+        <div class="col-half gutters">
+            <img src="/assets/images/git-touchbar.png" />
+        </div>
+        <div class="col-half gutters pad-sides">
+            <p>
+                Git Touch Bar is an <a href="https://electronjs.org">Electron</a> application
+                that attempts to make the Touch Bar a little more useful. The application runs
+                in the tray, but allows the user to change branches, pull, push, commit, and even
+                stash changes! Now there is a simple touch interface for Git!
+            </p>
+        </div>
+    </div>
+</kory-section>
+<kory-section class="no-padding-top" title="How it works">
+    <div class="row">
+        <div class="col-half gutters pad-sides">
+            <p>
+                This is simple interface that shows up when the user clicks on the icon in the tray. It
+                shows the user what repos they are tracking, and let's them choose the repo they want active
+                in the Touch Bar. To add another repo, just click the folder icon in the top right corner
+                and find the folder in the Finder. When the specific repo is active, that means all the actions
+                performed in the Touch Bar will be performed on that repo. Lastly, if you want to quit
+                the application, simply click the "X" in the top left corner.
+            </p>
+        </div>
+        <div class="col-half gutters">
+            <img src="/assets/images/git-touchbar-screenshot.png" />
+        </div>
+    </div>
+</kory-section>
+
+            </div>
+            <brand-container slant-top>
+                <div class="text-center">
+                    <div class="footer-icons pad-bottom">
+                        <a href="https://github.com/koryhutchison"><i class="fab fa-github fa-3x"></i></a>
+                        <a href="https://www.linkedin.com/in/kory-hutchison"><i class="fab fa-linkedin-in fa-3x"></i></a>
+                    </div>
+                    Copyright &copy; <span id="year"></span> Kory Hutchison
+                </div>
+            </brand-container>
+        </div>
+    </body>
+    <script type="text/javascript" src="/assets/js/default.js"></script>
+    <script src="/dist/build.js"></script>
+</html>

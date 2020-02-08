@@ -1,0 +1,46 @@
+[{
+    "id": "/wyze/2020/02/07/using-siri-shortcuts-with-wyze-cam",
+    "title": "Using Siri Shortcuts With Wyze Cam",
+    "excerpt": "Now you can use Siri to control your Wyze Cam.",
+    "url": "/wyze/2020/02/07/using-siri-shortcuts-with-wyze-cam.html",
+    "image": "/assets/images/blog/wyze-siri-shortcuts.jpg",
+    "date": "2020-02-07 00:00:00 -0600",
+    "categories": ["Wyze"],
+    "tags": ["Automation","Siri","Wyze"]
+},{
+    "id": "/django/2020/01/13/how-to-authenticate-with-custom-auth-user",
+    "title": "How To Authenticate With Custom Auth User",
+    "excerpt": "See how to use a custom auth user in authentication.",
+    "url": "/django/2020/01/13/how-to-authenticate-with-custom-auth-user.html",
+    "image": "/assets/images/blog/authenticate.jpg",
+    "date": "2020-01-13 00:00:00 -0600",
+    "categories": ["Django"],
+    "tags": ["Development","Python","Authentication"]
+},{
+    "id": "/django/2019/05/17/how-to-use-environment-variables",
+    "title": "How To Use Environment Variables",
+    "excerpt": "Learn how to use environment variables in your Django projects",
+    "url": "/django/2019/05/17/how-to-use-environment-variables.html",
+    "image": "/assets/images/blog/environment.png",
+    "date": "2019-05-17 00:00:00 -0500",
+    "categories": ["Django"],
+    "tags": ["Development","Python","Terminal","Nano"]
+},{
+    "id": "/django/2019/05/15/rapid-development-with-a-database",
+    "title": "Rapid Development With A Database",
+    "excerpt": "Learn how I make it very easy to develop with a database.",
+    "url": "/django/2019/05/15/rapid-development-with-a-database.html",
+    "image": "/assets/images/blog/rapid-development.png",
+    "date": "2019-05-15 00:00:00 -0500",
+    "categories": ["Django"],
+    "tags": ["Development","Python","Database","PostgreSQL"]
+},{
+    "id": "/django/2019/05/14/basic-django-project-setup",
+    "title": "Basic Django Project Setup",
+    "excerpt": "Learn how Django works and how to set up a project",
+    "url": "/django/2019/05/14/basic-django-project-setup.html",
+    "image": "/assets/images/django-logo.jpg",
+    "date": "2019-05-14 00:00:00 -0500",
+    "categories": ["Django"],
+    "tags": ["Development","Python","Terminal","PostgreSQL","Database"]
+}]

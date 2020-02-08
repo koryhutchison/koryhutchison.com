@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+    <head>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117700401-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-117700401-2');
+        </script>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>How To Use Environment Variables</title>
+        <meta property="og:title" content="How To Use Environment Variables">
+        
+        <meta name="description" content="Learn how to use environment variables in your Django projects" />
+        <meta property="og:description" content="Learn how to use environment variables in your Django projects">
+        
+        
+        <meta property="og:image" content="/assets/images/blog/environment.png">
+        
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="/assets/css/normalize.css">
+        <link rel="stylesheet" href="/assets/css/styles.css">
+    </head>
+    <body>
+        <div id="main">
+            <navigation></navigation>
+            <brand-container>
+                <h1 class="text-center pad-sides">How To Use Environment Variables</h1><p>
+                    Kory Hutchison - 17 May 2019
+                </p></brand-container>
+            <div>
+                <kory-section blog>
+    <img style="margin-bottom: 20px;" src="/assets/images/blog/environment.png" />
+    <p>Within a normal Django project, you’re bound to use some information that you need
+to be kept secret. Common examples of this are API keys and the Django SECRET_KEY.
+You wouldn’t want these to be in your git repo because most likely your repo is
+being stored on the internet at a place like <a href="https://www.github.com">github</a>. Sure,
+you might have a private repo, but even then your secret keys are still at risk.
+So what I want to show you is how you can easily set up environment variables so that
+you can also use them during local development. Let’s get started!</p>
+
+<h2 id="configuring-in-bash_profile">Configuring in .bash_profile</h2>
+
+<p>If you don’t know what .bash_profile is, it’s simply a file that your bash
+terminal will run every time it gets launched. I like to use .bash_profile because
+that’s the one I learned, but there are other files that bash uses as well.</p>
+
+<p>Open up your terminal and make sure you are in your home directory like so:</p>
+
+<highlight-code lang="bash">
+cd ~
+</highlight-code>
+
+<p>If you are a windows user, You’ll probably need to get some sort of terminal program
+in order to accomplish what I’m about to show you. I’m a Mac user, so I’m not entirely
+sure how it’s done on Windows. This <a href="https://gitforwindows.org">page</a> might be of help.</p>
+
+<p>Now that you are at your home directory, open up nano:</p>
+
+<highlight-code lang="bash">
+nano .bash_profile
+</highlight-code>
+
+<p>If you haven’t yet created a .bash_profile file yet, then Nano will create one for
+you. What we’re going to do is add one line that will set the Django SECRET_KEY for
+our project. Put it in like so:</p>
+
+<highlight-code lang="bash">
+export KEY="p2+$$p_@zc7m=j)6glc*t++vr2ngr^vk$0&amp;wv1#)35z=15%9sg"
+</highlight-code>
+
+<p>I’ve put in an example secret key but you should replace it with yours.</p>
+
+<p>Now to save and close you simply do ^X, and then Y and enter. Right now your terminal
+still doesn’t know what that variable is though because we haven’t relaunched the
+program. One way around this is to type:</p>
+
+<highlight-code lang="bash">
+source .bash_profile
+</highlight-code>
+
+<p>This will reload the file and you can verify that your variable is there like so:</p>
+
+<highlight-code lang="bash">
+echo $KEY
+</highlight-code>
+
+<p>And you should see your key show up. Now that we have the key in our .bash_profile,
+all there is left is to load that key in settings.py!</p>
+
+<h2 id="configure-django">Configure Django</h2>
+
+<p>This part is the easiest part. You’ll see at the top that Django already imports
+the Python OS library. So all you need to do is replace your secret key string and make
+it look like this:</p>
+
+<highlight-code lang="python">
+SECRET_KEY = os.environ['KEY']
+</highlight-code>
+
+<p>And that’s it! Pretty simple, huh? What’s really nice about this is that you can
+use your API test keys on your local, but then on your production server you can
+use your real keys without changing settings.py at all. Hope you find this useful!</p>
+
+</kory-section>
+            </div>
+            <brand-container slant-top>
+                <div class="text-center">
+                    <div class="footer-icons pad-bottom">
+                        <a href="https://github.com/koryhutchison"><i class="fab fa-github fa-3x"></i></a>
+                        <a href="https://www.linkedin.com/in/kory-hutchison"><i class="fab fa-linkedin-in fa-3x"></i></a>
+                    </div>
+                    Copyright &copy; <span id="year"></span> Kory Hutchison
+                </div>
+            </brand-container>
+        </div>
+    </body>
+    <script type="text/javascript" src="/assets/js/default.js"></script>
+    <script src="/dist/build.js"></script>
+</html>

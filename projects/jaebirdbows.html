@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+    <head>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117700401-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-117700401-2');
+        </script>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jae Bird Bows</title>
+        <meta property="og:title" content="Jae Bird Bows">
+        
+        <meta name="description" content="An eCommerce website that I built from the ground up." />
+        <meta property="og:description" content="An eCommerce website that I built from the ground up.">
+        
+        <meta property="og:image" content="/assets/images/jaebirdbows.png">
+        
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="/assets/css/normalize.css">
+        <link rel="stylesheet" href="/assets/css/styles.css">
+    </head>
+    <body>
+        <div id="main">
+            <navigation></navigation>
+            <brand-container>
+                <h1 class="text-center pad-sides">Jae Bird Bows</h1></brand-container>
+            <div>
+                <kory-section title="What is Jae Bird Bows?">
+    <div class="row">
+        <div class="col-half gutters">
+            <img src="/assets/images/jaebirdbows-screenshot.png" />
+        </div>
+        <div class="col-half gutters pad-sides">
+            <p>
+                <a href="https://www.jaebirdbows.com">Jae Bird Bows</a> is an eCommerce website that
+                I built for my sister as one of my first side projects. I had recently learned Django,
+                and I wanted to have something that would look good on my resume. I built an entire admin
+                interface and checkout process all from scratch. It was an amazing learning experience.
+            </p>
+        </div>
+    </div>
+</kory-section>
+<kory-section class="no-padding-top" title="What is it built with?">
+    <div class="row">
+        <div class="col-half gutters pad-sides">
+            <p>
+                I used Django as my main framework, but I used an additional library called <a href="http://doconix.github.io/django-mako-plus/">Django Mako Plus</a>.
+                That library helps simplify the routing and adds a stronger templating language to Django. I used PostgreSQL for the
+                database and designed the whole thing myself. From storing product information, orders, and even a coupon system, this
+                database was quite a challenge. In order to process payments, I leveraged Stripe which made the process very easy, and professional.
+            </p>
+        </div>
+        <div class="col-half gutters">
+            <img class="no-shadow" src="/assets/images/jaebirdbows-stack.png" />
+        </div>
+    </div>
+</kory-section>
+
+            </div>
+            <brand-container slant-top>
+                <div class="text-center">
+                    <div class="footer-icons pad-bottom">
+                        <a href="https://github.com/koryhutchison"><i class="fab fa-github fa-3x"></i></a>
+                        <a href="https://www.linkedin.com/in/kory-hutchison"><i class="fab fa-linkedin-in fa-3x"></i></a>
+                    </div>
+                    Copyright &copy; <span id="year"></span> Kory Hutchison
+                </div>
+            </brand-container>
+        </div>
+    </body>
+    <script type="text/javascript" src="/assets/js/default.js"></script>
+    <script src="/dist/build.js"></script>
+</html>

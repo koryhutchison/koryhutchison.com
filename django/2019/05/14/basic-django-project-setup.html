@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+    <head>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117700401-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-117700401-2');
+        </script>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Basic Django Project Setup</title>
+        <meta property="og:title" content="Basic Django Project Setup">
+        
+        <meta name="description" content="Learn how Django works and how to set up a project" />
+        <meta property="og:description" content="Learn how Django works and how to set up a project">
+        
+        
+        <meta property="og:image" content="/assets/images/django-logo.jpg">
+        
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="/assets/css/normalize.css">
+        <link rel="stylesheet" href="/assets/css/styles.css">
+    </head>
+    <body>
+        <div id="main">
+            <navigation></navigation>
+            <brand-container>
+                <h1 class="text-center pad-sides">Basic Django Project Setup</h1><p>
+                    Kory Hutchison - 14 May 2019
+                </p></brand-container>
+            <div>
+                <kory-section blog>
+    <img style="margin-bottom: 20px;" src="/assets/images/django-logo.jpg" />
+    <p>Django is a web framework that makes it really easy to get started. Their
+<a href="https://www.djangoproject.com">website</a> says that “Django is a high-level Python
+Web framework that encourages rapid development and clean, pragmatic design.” I want
+to highlight how I set up my projects so that I can help you always get started very
+quickly.</p>
+
+<h2 id="environment">Environment</h2>
+<p>First things first we want to make sure we set up the environment correctly. That
+way it’s very easy to have multiple Django projects on the same machine. And it’s
+especially helpful when you have different versions of Django for those projects.
+So what we’re going to set up is a “virtual environment”. First you’ll want to install
+the latest version of python from <a href="https://www.python.org/downloads/">here</a>. Move
+to the directory where you want to make your project and then create the virtual
+environment with these commands:</p>
+
+<highlight-code lang="bash">
+pip3 install virtualenv
+virtualenv env
+</highlight-code>
+
+<p>Then activate the environment:</p>
+
+<highlight-code lang="bash">
+source env/bin/activate
+</highlight-code>
+
+<p>After activation, you should see a (env) appear in your command prompt. That means
+we are now in the environment and any python libraries that we install will remain
+within that environment. Now let’s move on to installing Django!</p>
+
+<h2 id="installing-django">Installing Django</h2>
+<p>Like I said before, this is super easy! All we need to do is this:</p>
+
+<highlight-code lang="bash">
+pip install django
+</highlight-code>
+
+<p>Now notice that I didn’t need to do pip3 this time. That’s because the virtual environment
+already knows that we are using python 3. Therefore, we don’t need to specify it again.</p>
+
+<p>Next we will create our Django project:</p>
+
+<highlight-code lang="bash">
+django-admin startproject mysite
+</highlight-code>
+
+<p>This creates a folder called mysite and that folder now contains your entire Django
+application. Go ahead and move inside the folder and you should see a file called
+manage.py and a folder called mysite. In mysite you’ll see __init__.py, settings.py,
+urls.py, and wsgi.py. I want to quickly go over what each of these files are for.</p>
+
+<ul>
+  <li><strong>manage.py</strong>
+    <ul>
+      <li>manage.py is the file that handles all Django commands. We’ll be using it later in the
+tutorial so you’ll be able to see a little of what it does.</li>
+    </ul>
+  </li>
+  <li><strong>_<em>init_</em>.py</strong>
+    <ul>
+      <li>__init__.py is a python file that lets python know that the folder is a python module</li>
+    </ul>
+  </li>
+  <li><strong>settings.py</strong>
+    <ul>
+      <li>settings.py is a very important file because it holds all of your project settings. This
+file can be incredibly useful when using API keys or any other custom settings for
+your project.</li>
+    </ul>
+  </li>
+  <li><strong>urls.py</strong>
+    <ul>
+      <li>urls.py is where you define all the routes of the project. This main urls.py file typically
+is used to direct to the other urls.py files within your apps. We haven’t reached that
+point yet in the tutorial, but you’ll see in a second.</li>
+    </ul>
+  </li>
+  <li><strong>wsgi.py</strong>
+    <ul>
+      <li>wsgi.py helps run the application. You should rarely touch this file.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>So now that we’ve gone over that and we’ve got the project installed, let’s go ahead and see if it
+works! Make sure you are in the same directory as manage.py and then run the following command
+to start your local server:</p>
+
+<highlight-code lang="bash">
+python manage.py runserver
+</highlight-code>
+
+<p>After running that, you should be able to open your browser to <a href="http://localhost:8000">http://localhost:8000</a> and
+see the default Django page! Note that you need to have your virtual environment activated in
+order for any Django commands to work. Press ^C to shut down the server, and we’ll move on to the
+database.</p>
+
+<h2 id="database">Database</h2>
+<p>I always use PostgreSQL with my projects simply because it’s what I’m familiar with,
+and it’s a pretty popular database. In terms of how you’ll use Django, it doesn’t
+matter what database you choose because of the ORM. So I’ll walk though how to set up
+PostgreSQL and connect it to Django.</p>
+
+<p>If you don’t have PostgreSQL installed, head over to
+<a href="https://www.postgresql.org/download/">https://www.postgresql.org/download/</a> and
+choose the correct operating system and go ahead and install it. I’ve normally done
+it through the Interactive installer by EnterpriseDB. Once you have it installed,
+there will be an application called pgAdmin. Open that, and you’ll see the following
+screen in your browser:</p>
+
+<p><img src="/assets/images/blog/pgAdmin-screenshot.png" alt="pgAdmin screenshot" /></p>
+
+<p>Click on the “Servers” drop down on the left and if you don’t have a server there,
+you’ll want to right click and choose create &gt; server. Put in whatever name you want,
+and then put localhost for the host name under the connection tab. Once you have the server
+made, choose create &gt; database. Name the database whatever you want, and set the owner
+to the owner you made when you installed PostgreSQL. Mine is just “postgres”, and
+yours probably is too.</p>
+
+<p>Now that we have the database set up, now we will connect it to Django! Open up
+settings.py in your favorite editor (mine is <a href="https://atom.io">atom</a>) and scroll down
+to where you see a code snippet like this:</p>
+
+<highlight-code lang="python">
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+</highlight-code>
+
+<p>This is where you set the databases that the project will use. Right now the project
+comes with sqlite by default, and you can even see the database file show up
+in the same directory as manage.py. So what you’ll do is replace that entire code block
+with this:</p>
+
+<highlight-code lang="python">
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': '[Database Name]',
+        'USER': '[Database User]',
+        'PASSWORD': '[Server Password]',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+</highlight-code>
+
+<p>We specify a few parameters more than what was there before. For PostgreSQL, we
+have to use a library called psycopg2 in order to facilitate the communication with
+Django. Then you specify the name of the database you just created, the user (the owner of the database),
+and then the password. If you are having trouble with the password, you would have created
+it upon server creation. Lastly we set the host to localhost because the database is on
+your computer, and then port to ‘’ because we are going to use the default port. Technically
+you don’t have to put that in there, but I like it there just in case I have to change it for
+deployment or something like that.</p>
+
+<p>Now that we have the database settings set, all we need to do is make sure psycopg2 is
+installed. Go to your terminal and run this command:</p>
+
+<highlight-code lang="bash">
+pip install psycopg2-binary
+</highlight-code>
+
+<p>After that’s installed, we should be good to go! So now what’s left is to apply the
+app models to the database. Run these commands one at a time:</p>
+
+<highlight-code lang="bash">
+python manage.py makemigrations
+python manage.py migrate
+</highlight-code>
+
+<p>If there are no errors, then that means it all worked! These 2 commands are for putting your
+models into the database. With a default Django project, there are a few models that exist
+that Django makes for you. So we are making the migrations, or the files that will actually
+execute on the database. Then migrate is what runs those files on the database. I’ll do
+another tutorial about how I streamline this process. But for now, that’s how you set up a Django
+project!</p>
+
+</kory-section>
+            </div>
+            <brand-container slant-top>
+                <div class="text-center">
+                    <div class="footer-icons pad-bottom">
+                        <a href="https://github.com/koryhutchison"><i class="fab fa-github fa-3x"></i></a>
+                        <a href="https://www.linkedin.com/in/kory-hutchison"><i class="fab fa-linkedin-in fa-3x"></i></a>
+                    </div>
+                    Copyright &copy; <span id="year"></span> Kory Hutchison
+                </div>
+            </brand-container>
+        </div>
+    </body>
+    <script type="text/javascript" src="/assets/js/default.js"></script>
+    <script src="/dist/build.js"></script>
+</html>
